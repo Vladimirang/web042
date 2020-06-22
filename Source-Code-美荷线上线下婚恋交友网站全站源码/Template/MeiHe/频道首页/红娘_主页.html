@@ -1,0 +1,156 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{$SiteName/}-红娘</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script src="/JS/Controls/B_User.js"></script>
+<style>
+.home_nav { margin-bottom:0;}
+</style>
+</head> 
+<body>
+{ZL.Label id="全站头部"/}
+<!--头部结束-->
+
+<div class="hn_info">
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-md-offset-5">
+<div class="hn_info_c">
+<h2>红娘一对一</h2>
+<p>
+百合网在全国的实体店中拥有一批专业的线下红娘队伍，所有红娘均经过系统化的培训，并获得国家级婚姻家庭咨询师。我们会根据您的感情经历，择偶方向为您分配专属红娘，在您的寻爱旅程中为您指引方向
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="hn_info hn_info2">
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+<div class="hn_info_c hn_info_c2">
+<h2>100%真实会员</h2>
+<p>
+所有红娘一对一会员均会经过实名认证，同时，我们也会针对用户的婚姻状况，收入状况，房产状况进行核实，保证会员信息真实有效</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="hn_info hn_info3">
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-md-offset-5">
+<div class="hn_info_c hn_info_c3">
+<h2>婚恋/心理咨询</h2>
+<p>
+百合婚恋专家及心理专家会对您在感情生活中遇到的困扰给予疏导，一对一会员均可免费获得婚恋指导及心理咨询服务，告别烦恼，迎接崭新的人生
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="hn_info hn_info4">
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+<div class="hn_info_c hn_info_c4">
+<h2>形象设计指导</h2>
+<p>
+约会中，一个好的个人形象无疑为会自己加分，男士乘车时为异性拉开车门同样也会更加赢得对方的好感。我们有专业的形象设计师，为您提供形象设计，约会指导，帮助您更好的赢得异性的青睐
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="hn_info hn_info5">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+<div class="hn_info_c hn_info_c5">
+<h2>全国实体店</h2>
+<p>
+百合网线下实体店遍布全国百余城市，覆盖北京、上海、广州、深圳等一二线城市，您可以前往实体店建立征婚档案，可以与红娘老师沟通交流，可以在实体店与红娘为您安排的异性约会见面
+</p>
+<a href="#">立即报名</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script>
+
+//手机下右侧导航菜单效果
+$(function () {
+    $('button.navbar-toggle').click(function () {
+        $('body').toggleClass('out');
+        $('nav.navbar-fixed-top').toggleClass('out');
+        if ($('body').hasClass('out')) {
+            $(this).focus();
+        }
+        else {
+            $(this).blur();
+        }
+    });
+});
+$(document).click(function (e) {
+    if (!$(e.target).closest('.navbar-collapse, button.navbar-toggle').length && $('body').hasClass('out')) {
+        e.preventDefault();
+        $('button.navbar-toggle').trigger('click');
+    }
+}).keyup(function (e) {
+    if (e.keyCode == 27 && $('body').hasClass('out')) {
+        $('button.navbar-toggle').trigger('click');
+    }
+});
+
+//检测固顶事件
+var IO=document.getElementById('home_nav'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+
+var buser = new B_User();//会员ajax登录状态需要结合JS/Controls/B_User.js引用同步生效
+buser.IsLogged(function(data,flag){
+	if(flag)
+	{
+		data=JSON.parse(data);
+		$(".home_user a").html(data.UserName);
+        $(".home_user").removeClass("hidden");
+        $(".home_logout").removeClass("hidden");
+		$(".home_register").hide();
+        $(".home_login").hide();
+	}
+});
+function LogoutFun()
+{
+	buser.Logout(function(){location=location;});
+}
+</script>

@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="msapplication-TileColor" content="#1A0066"/>
+<meta name="msapplication-TileImage" content="/images/win8_symbol_140x140.png"/>
+<title>{$SiteName/}_首页</title>
+{$MetaKeywords/}
+{$MetaDescription/}
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js"></script>
+<script src="/JS/Controls/B_User.js"></script>
+</head>
+<body>
+<div class="home_nav" id="home_nav">
+<nav class="navbar navbar-default">
+<div class="container">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a class="navbar-brand" href="/"><img src="{$CssDir/}images/logo.svg" alt="{$SiteName/}" /></a>
+<div class="home_logo_text"><span class="site_span">上海</span> <span class="site_ch">[切换城市]<span class="caret"></span></span></div>
+</div>
+
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav">
+<li class="active"><a href="/default.aspx">主页</a></li>
+<li><a href="{ZL:GetNodeListUrl(6)/}">我的</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(1)/}">邂逅</a></li>
+<li><a href="/index">互动</a></li>
+<li><a href="/user/Message/Message">消息</a></li>
+<li><a href="/Search/SearchList">搜索发现</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(3)/}">红娘</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(4)/}">线下俱乐部</a></li>
+<li class="home_register"><a href="/User/Register">注册</a></li>
+<li class="home_login"><a href="/User/info/UserBase?sel=Tabs0">登录</a></li>
+<li class="home_user hidden"><a href="/User/info/UserBase?sel=Tabs0"></a></li>
+<li class="home_logout hidden"><a href="javascript:;" onClick="LogoutFun();">退出</a></li>
+</ul>
+</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+</div>
+<!--头部结束-->
+
+<div class="container">
+<div class="home_mes">
+<div class="home_mes_info">
+<a href="#">
+<img src="" alt="" onerror="javascript:this.src='/images/userface/noface.png'"/>
+<p class="name">DADADAD</p>
+</a>
+<div class="home_mes_list">
+<p>资料完整度</p>
+<p><span>前去完善</span></p>
+<ul>
+<li><a href="#"><img src="{$CssDir/}images/home_icon1.png" alt="" /></a></li>
+<li><a href="#"><img src="{$CssDir/}images/home_icon2.png" alt="" /></a></li>
+<li><a href="#"><img src="{$CssDir/}images/home_icon3.png" alt="" /></a></li>
+<li><a href="#"><img src="{$CssDir/}images/home_icon4.png" alt="" /></a></li>
+<li><a href="#"><img src="{$CssDir/}images/home_icon5.png" alt="" /></a></li>
+<div class="clearfix"></div>
+</ul>
+</div>
+<ul>
+<li>
+<a href="#">
+<span>0</span>
+<p>未读消息</p>
+</a>
+</li>
+<li>
+<a href="#">
+<span>1</span>
+<p>我的美荷豆</p>
+</a>
+</li>
+<li>
+<a href="#">
+<span>0</span>
+<p>我的订单</p>
+</a>
+</li>
+<div class="clearfix"></div>
+</ul>
+<button class="btn">进入我的美荷</button>
+</div>
+</div>
+</div>
+<!--个人信息结束-->
+
+<div class="container">
+<div class="row">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+<div role="tabpanel" class="home_tabs">
+<div class="home_tabs_r">
+<a href="#">非常完美</a>
+<span>|</span>
+<a href="#">中国式相亲</a>
+<a href="#">更多 >></a>
+</div>
+<ul class="nav nav-tabs tabs_list" role="tablist">
+<li role="presentation" class="active"><a href="#home_tab" aria-controls="home_tab" role="tab" data-toggle="tab">专属红娘</a></li>
+<li role="presentation"><a href="#home_tab1" aria-controls="home_tab1" role="tab" data-toggle="tab">为你而来</a></li>
+<li role="presentation"><a href="#home_tab2" aria-controls="home_tab2" role="tab" data-toggle="tab">我们相爱吧</a></li>
+</ul>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="home_tab">
+<a href="#"><img src="{$CssDir/}images/home_tab1.jpg" alt="" /></a>
+<div class="home_tab_r">
+<p>金牌红娘</p>
+<p>专属通道</p>
+<a href="#">我要报名</a>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane" id="home_tab1">112</div>
+<div role="tabpanel" class="tab-pane" id="home_tab2">1222</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<div class="home_ser">
+<div class="home_ser_tit">服务推荐</div>
+<ul class="media-list">
+<li class="media">
+<a href="#">
+<div class="media-left media-middle"><span><img src="{$CssDir/}images/home_ser1.png" alt="" /></span></div>
+<div class="media-body media-middle">
+<h4>双节狂欢</h4>
+<p>恋爱神器买一送六</p>
+</div>
+</a>
+</li>
+<li class="media">
+<a href="#">
+<div class="media-left media-middle"><span><img src="{$CssDir/}images/home_ser1.png" alt="" /></span></div>
+<div class="media-body media-middle">
+<h4>双节狂欢</h4>
+<p>恋爱神器买一送六</p>
+</div>
+</a>
+</li>
+<li class="media">
+<a href="#">
+<div class="media-left media-middle"><span><img src="{$CssDir/}images/home_ser1.png" alt="" /></span></div>
+<div class="media-body media-middle">
+<h4>双节狂欢</h4>
+<p>恋爱神器买一送六</p>
+</div>
+</a>
+</li>
+<li class="media">
+<a href="#">
+<div class="media-left media-middle"><span><img src="{$CssDir/}images/home_ser1.png" alt="" /></span></div>
+<div class="media-body media-middle">
+<h4>双节狂欢</h4>
+<p>恋爱神器买一送六</p>
+</div>
+</a>
+</li>
+<div class="clearfix"></div>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!--滑动门和服务推荐结束-->
+
+<div class="container margin_bottom20">
+<div class="home_pic_tit">
+优质会员
+<ul hidden="">
+<li><label>我要找：</label>
+<div class="">
+<select>
+<option value="0">女友</option>
+<option value="1">男友</option>
+</select>
+</div>
+</li>
+</ul>
+</div>
+<div class="row margin_0">
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding0">
+<div class="home_pic_list">
+<ul>
+<li class="active">
+<a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a>
+<div><p>小雪<span>23岁  匀称</span></p></div>
+</li>
+<li>
+<a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a>
+<div><p>小雪<span>23岁  匀称</span></p></div>
+</li>
+<li>
+<a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a>
+<div><p>小雪<span>23岁  匀称</span></p></div>
+</li>
+<li>
+<a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a>
+<div><p>小雪<span>23岁  匀称</span></p></div>
+</li>
+<li>
+<a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a>
+<div><p>小雪<span>23岁  匀称</span></p></div>
+</li>
+<div class="clearfix"></div>
+</ul>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding0">
+<div class="home_pic_list">
+<ul>
+<li class="active"><a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a></li>
+<li><a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a></li>
+<li><a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a></li>
+<li><a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a></li>
+<li><a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a></li>
+<div class="clearfix"></div>
+</ul>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding0">
+<div class="home_pic_list home_pic_lr">
+<ul>
+<li class="active"><a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a></li>
+<li><a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a></li>
+<li><a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a></li>
+<li><a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a></li>
+<li><a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a></li>
+<div class="clearfix"></div>
+</ul>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 padding0">
+<div class="home_pic_list home_pic_lr">
+<ul>
+<li class="active"><a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a></li>
+<li><a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a></li>
+<li><a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a></li>
+<li><a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a></li>
+<li><a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a></li>
+<div class="clearfix"></div>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!--优质会员结束-->
+
+<div class="container margin_bottom20">
+<div class="home_ad">
+<a href="#"><img src="{$CssDir/}images/home_ad.jpg" alt="" /></a>
+</div>
+</div>
+<!--广告-->
+
+<div class="container margin_bottom20">
+<div class="home_groom_tit">美荷推荐<a href="#">更多 >></a></div>
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<div class="home_groom_list">
+<div class="media">
+<div class="media-left media-middle">
+<a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a>
+</div>
+<div class="media-body media-middle">
+<h4><a href="#">ME</a></h4>
+<span>29岁<br/>12张照片</span>
+<p>大家好，我是一个独立，体贴的女孩，现在常住地点在大家好，我是一个独立，体贴的女孩，现在常住地点在大家好，我是一个独立，体贴的女孩，现在常住地点在大家好，我是一个独立，体贴的女孩，现在常住地点在</p>
+<a href="#">查看资料</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<div class="home_groom_list">
+<div class="media">
+<div class="media-left media-middle">
+<a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a>
+</div>
+<div class="media-body media-middle">
+<h4><a href="#">ME</a></h4>
+<span>29岁<br/>12张照片</span>
+<p>大家好，我是一个独立，体贴的女孩，现在常住地点在大家好，我是一个独立，体贴的女孩，现在常住地点在大家好，我是一个独立，体贴的女孩，现在常住地点在大家好，我是一个独立，体贴的女孩，现在常住地点在</p>
+<a href="#">查看资料</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<div class="home_groom_list">
+<div class="media">
+<div class="media-left media-middle">
+<a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a>
+</div>
+<div class="media-body media-middle">
+<h4><a href="#">ME</a></h4>
+<span>29岁<br/>12张照片</span>
+<p>大家好，我是一个独立，体贴的女孩，现在常住地点在大家好，我是一个独立，体贴的女孩，现在常住地点在大家好，我是一个独立，体贴的女孩，现在常住地点在大家好，我是一个独立，体贴的女孩，现在常住地点在</p>
+<a href="#">查看资料</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<div class="home_groom_list">
+<div class="media">
+<div class="media-left media-middle">
+<a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a>
+</div>
+<div class="media-body media-middle">
+<h4><a href="#">ME</a></h4>
+<span>29岁<br/>12张照片</span>
+<p>大家好，我是一个独立，体贴的女孩，现在常住地点在大家好，我是一个独立，体贴的女孩，现在常住地点在大家好，我是一个独立，体贴的女孩，现在常住地点在大家好，我是一个独立，体贴的女孩，现在常住地点在</p>
+<a href="#">查看资料</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<div class="home_groom_list">
+<div class="media">
+<div class="media-left media-middle">
+<a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a>
+</div>
+<div class="media-body media-middle">
+<h4><a href="#">ME</a></h4>
+<span>29岁<br/>12张照片</span>
+<p>大家好，我是一个独立，体贴的女孩，现在常住地点在大家好，我是一个独立，体贴的女孩，现在常住地点在大家好，我是一个独立，体贴的女孩，现在常住地点在大家好，我是一个独立，体贴的女孩，现在常住地点在</p>
+<a href="#">查看资料</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<div class="home_groom_list">
+<div class="media">
+<div class="media-left media-middle">
+<a href="#"><img src="{$CssDir/}images/index1.jpg" alt="" /></a>
+</div>
+<div class="media-body media-middle">
+<h4><a href="#">ME</a></h4>
+<span>29岁<br/>12张照片</span>
+<p>大家好，我是一个独立，体贴的女孩，现在常住地点在大家好，我是一个独立，体贴的女孩，现在常住地点在大家好，我是一个独立，体贴的女孩，现在常住地点在大家好，我是一个独立，体贴的女孩，现在常住地点在</p>
+<a href="#">查看资料</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--美荷推荐结束-->
+
+<div class="container margin_bottom20">
+<div class="home_story_tit">成功故事<a href="#">谱写自己的幸福 ></a></div>
+<div class="home_story_list">
+<ul>
+<li class="active"><a href="#"><img src="{$CssDir/}images/home_pic2.jpg" alt="" /></a><label>夫妻相</label></li>
+<li><a href="#"><img src="{$CssDir/}images/home_pic3.jpg" alt="" /></a><label>裸婚</label></li>
+<li><a href="#"><img src="{$CssDir/}images/home_pic4.jpg" alt="" /></a><label>心有灵犀</label></li>
+<li><a href="#"><img src="{$CssDir/}images/home_pic5.jpg" alt="" /></a><label>命中注定</label></li>
+<li><a href="#"><img src="{$CssDir/}images/home_pic6.jpg" alt="" /></a><label>夫妻相</label></li>
+<li><a href="#"><img src="{$CssDir/}images/home_pic7.jpg" alt="" /></a><label>一见钟情</label></li>
+<li><a href="#"><img src="{$CssDir/}images/home_pic8.jpg" alt="" /></a><label>俊男美女</label></li>
+</ul>
+</div>
+</div>
+<!--成就故事结束-->
+
+<div class="container">
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+<div class="home_server_tit">红娘服务 <a href="#">免费体验红娘服务 ></a></div>
+<div class="home_server_ad"><a href="#"><img src="{$CssDir/}images/home_ser1.jpg" alt=""></a></div>
+<div class="home_server_list">
+<ul>
+<li class="active">热门<br/>实体店 <em></em></li>
+<li><a href="#">北京直营店</a></li>
+<li><a href="#">上海静安店</a></li>
+<li><a href="#">南京苏豪店</a></li>
+<li><a href="#">深圳直营店</a></li>
+<li><a href="#">广州国际店</a></li>
+<li><a href="#">杭州国都店</a></li>
+<li><a href="#">苏州永捷店</a></li>
+<li><a href="#">天津小白楼店</a></li>
+<li><a href="#">杭州西城店</a></li>
+<li><a href="#">更多</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+<div class="home_ac_tit">百合活动 <a href="#">更多 ></a></div>
+<div class="home_ac_ad"><a href="#"><img src="{$CssDir/}images/home_ac1.jpg" alt=""></a></div>
+<div class="home_me_tit">媒体指导 <a href="#">更多 ></a></div>
+<div class="home_me_ad"><a href="#"><img src="{$CssDir/}images/home_ser1.jpg" alt=""></a></div>
+</div>
+</div>
+</div>
+
+<div class="home_footer">
+<div class="container">
+<ul>
+<li><a href="{ZL:GetInfoUrl(1)/}">关于美荷</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(11)/}">线下门店</a></li>
+<li><a href="{ZL:GetInfoUrl(2)/}">联系我们</a></li>
+<li><a href="{ZL:GetInfoUrl(3)/}">招贤纳士</a></li>
+<li><a href="{ZL:GetInfoUrl(4)/}">帮助中心</a></li>
+<li><a href="{ZL:GetInfoUrl(5)/}">服务条款</a></li>
+<li><a href="{ZL:GetInfoUrl(6)/}">隐私保护</a></li>
+<li><a href="{ZL:GetInfoUrl(7)/}">交友安全</a></li>
+<li><a href="/Guest">意间反馈</a></li>
+<li><a href="{ZL:GetLastinfo(6)/}">网站地图</a></li>
+<div class="clearfix"></div>
+</ul>
+<p>客服专线：400-22222-555（8：00 至 20：00）</p>
+<p>客服微信：meiheapp   客服邮箱：service@meiheapp.com</p>
+<div style="margin-top:5em;">{$Copyright/}</div>
+</div>
+</div>
+</body>
+</html>
+<script>
+//手机下右侧导航菜单效果
+$(function () {
+    $('button.navbar-toggle').click(function () {
+        $('body').toggleClass('out');
+        $('nav.navbar-fixed-top').toggleClass('out');
+        if ($('body').hasClass('out')) {
+            $(this).focus();
+        }
+        else {
+            $(this).blur();
+        }
+    });
+});
+$(document).click(function (e) {
+    if (!$(e.target).closest('.navbar-collapse, button.navbar-toggle').length && $('body').hasClass('out')) {
+        e.preventDefault();
+        $('button.navbar-toggle').trigger('click');
+    }
+}).keyup(function (e) {
+    if (e.keyCode == 27 && $('body').hasClass('out')) {
+        $('button.navbar-toggle').trigger('click');
+    }
+});
+
+//检测固顶事件
+var IO=document.getElementById('home_nav'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+
+var buser = new B_User();//会员ajax登录状态需要结合JS/Controls/B_User.js引用同步生效
+buser.IsLogged(function(data,flag){
+	if(flag)
+	{
+		data=JSON.parse(data);
+		$(".home_user a").html(data.UserName);
+        $(".home_user").removeClass("hidden");
+        $(".home_logout").removeClass("hidden");
+		$(".home_register").hide();
+        $(".home_login").hide();
+	}
+});
+function LogoutFun()
+{
+	buser.Logout(function(){location=location;});
+}
+</script>
